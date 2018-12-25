@@ -47,11 +47,11 @@ body, html {
     position: fixed;
     top: 0;
     width: 100%;
-    background-image: url(../images/chalkboard.jpg);
+    background-image: url(../images/news.jpg);
     z-index: 2;
     }
     
-    . articleCardTitle {
+    .articleCardTitle {
     background-color: black;
     }
     
