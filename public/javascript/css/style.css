@@ -1,0 +1,125 @@
+body, html {
+    height: 100%;
+    }
+    
+    body { 
+    background-color: black;
+    }
+    
+    .titleBackground {
+    
+    margin: 0px;
+    background: url("../images/coffee_image.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+    
+    .header {
+    
+    margin-top: 50px; background-color: black; color: white;
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 20px;
+    }
+    
+    /* <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> */
+    
+    #title {
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    border-bottom: 2px solid black;
+    }
+    
+    #navbar {
+    background-color: black;
+    padding: 10px 30px 10px 30px;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    }
+    
+    .jumpPage {
+    color: white;
+    margin-right: 50px;
+    }
+    
+    .sticky { 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-image: url(../images/);
+    z-index: 2;
+    }
+    
+    . articleCardTitle {
+    background-color: black;
+    }
+    
+    .card {
+    margin-top: 20px;
+    }
+    
+    .articleCardBody {
+    border: 2px solid black;
+    }
+    
+    .articleHref {
+    text-decoration: none;
+    color: white
+    }
+    
+    .artichleHref:hover {
+    text-decoration: none;
+    color: green
+    }
+    
+    p {
+    font-family: 'Open Sans', sans-serif;
+    }
+    
+    .articlePic {
+    width: 100%
+    }
+    
+    .buttonsHere {
+    margin-right: 0px
+    }
+    
+    .saveArticle {
+    
+    margin-top: 10px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    }
+    
+    .modalBackground {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    }
+    
+    .buttonss {
+    margin-top: 10px
+    }
+    
+    #newNoteTitle{
+        width: 100%
+    }
+
+    #newNoteBody {
+    width: 100%
+    }
+    
+    .eachCard {
+    padding-bottom: 50px;
+    padding-top: 20px
+    }
+    
+    .newNoteCard {
+    display: block;
+    width: 100%
+    }
+    
+    .noteCardBody {
+    color: black
+    }

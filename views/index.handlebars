@@ -1,141 +1,48 @@
-<h1></h1>
-      {{dbArticle.title}}</h1>
-<p>{{dbArticle.link}}</p>
-<img src={{dbArticle.picture}}></img>
+<div class="rows" id="wrapper">
+      <h1 class="titlefont titlesize">Chi Chi News</h1>
+            <div class="col-8" id="articles"></div>
+                   {{#each articles}}
+                        <p class='titlefont'> {{data.title}} </p>
+                        <p> {{data.link}} </p>
+                        <img src={ {data.picture}} height='100px' width='120px'>
+                        <p class='summary'> {{data.summary}}
+                        <br>
+                        <button data-id={{data._id}} type='button' class='btn btn-success' id='createNote'> Note </button>
 
-<div class="row">
+                  {{/each}}
+            <div class="col-4" id="notes"></div>
 
-      <div class="col-12">
-
-            <div class="jumbotron titleBackground">
-
-                  <div class="header">
-
-                        <div id="title">ChiChi News</div>
-
-                  </div>
-
-            </div>
-
-      </div>
-
+            {{#each notes}}
+            <h2 class='titlefont'>{{data.title}}</h2> 
+            <input class='titlefont' id='notetitle' name='title'> 
+            <textarea id='notebody' name='body'> </textarea>
+            <button data-id={{data._id}} id='notesaved' type='button' class='btn btn-success'> Save Note </button>"
 </div>
 
 <div class="eachCard">
-
       <div class="row">
-
             <div class="col-1">
-
             </div>
-
             <div class="col-10 articleHere">
-
                   {{#each articles}}
-
                   <div class="card">
-
                         <div class="articleCardTitle">
-
                               <a class="articleHref" href={{link}} target="_blank">{{title}}</a>
-
                         </div>
-
                         <div class="articleCardBody">
-
                               <div class="row">
-
                                     <div class="col-4">
-
                                           <img class="articlePic" src={{picture}}>
                                           <p>{{date}}</p>
-
                                     </div>
-
                                     <div class="col-6">
-
                                           <p>{{summary}}</p>
-
                                     </div>
-
                                     <div class="col-2 buttonsHere">
-
                                           <button type="button" class="btn btn-primary saveArticle" data-id={{id}}>Save Article</button>
-
                                     </div>
-
                               </div>
-
                         </div>
-
                   </div>
-
                   {{/each}}
-
             </div>
-
-            <div class="col-1">
-
-            </div>
-
-      </div>
-
-</div>
-
-<div class="modal fade" id="newArticle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-      <div class="modal-dialog" role="document">
-
-            <div class="modal-content">
-
-                  <div class="modalBackground ">
-
-                        <h5 class="modal-title newArticleTitle">You’ve Scraped more Articles! </h5>
-
-                  </div>
-
-                  <div class="modal-body newArticleBody">
-
-                  </div>
-
-                  <div class="modal-footer">
-
-                        <button type="button" class="btn btn-secondary" id="scrapeDone" data-dismiss="modal">Close</button>
-
-                  </div>
-
-            </div>
-
-      </div>
-
-</div>
-
-<div class="modal fade" id="savedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-      <div class="modal-dialog" role="document">
-
-            <div class="modal-content">
-
-                  <div class="modalBackground">
-
-                        <h5 class="modal-title savedTitle"> DONE </h5>
-
-                  </div>
-
-                  <div class="modal-body">
-
-                        <p> Your Article has been Saved! </p>
-
-                  </div>
-
-                  <div class="modal-footer">
-
-                        <button type="button" class="btn btn-secondary" id="modalClose" data-dismiss="modal">Close</button>
-
-                  </div>
-
-            </div>
-
-      </div>
-
-</div>
