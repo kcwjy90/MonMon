@@ -33,6 +33,11 @@ var PORT = process.env.PORT || 3000;
 var logger = require("morgan");
 app.use(logger("dev"));
 
+// Serve up static assets
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
 //parsing request in json format
 app.use(express.urlencoded({extended:true}));
 app.use(express.json())
@@ -40,9 +45,8 @@ app.use(express.json())
 //public folder
 app.use(express.static("public"))
 
-
 //connects to mongodb
-mongoose.connect("mongodb://localhost/mongoHeadlines", {useNewUrlParser: true});
+mongoose.connect( process.env.MONGODB_URI ||"mongodb://localhost/mongoHeadlines", {useNewUrlParser: true});
 
 
 
